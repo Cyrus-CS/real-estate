@@ -1,0 +1,440 @@
+INSERT INTO users
+(id, first_name, last_name, email, password, phone, avatar, role, email_verified_at, created_at, updated_at)
+VALUES
+-- Admin
+(1, 'Albert', 'Flores', 'albert.flores@estatevista.com', '$2y$12$HASHED_PWD', '+1-212-000-0001', NULL, 'admin', NOW(), NOW(), NOW()),
+-- Agents
+(2, 'Jordan', 'Mitchell', 'jordan.mitchell@estatevista.com', '$2y$12$HASHED_PWD', '+1-212-111-0001', NULL, 'agent', NOW(), NOW(), NOW()),
+(3, 'Sophia', 'Reynolds', 'sophia.reynolds@estatevista.com', '$2y$12$HASHED_PWD', '+1-212-111-0002', NULL, 'agent', NOW(), NOW(), NOW()),
+(4, 'Marcus', 'Chen', 'marcus.chen@estatevista.com', '$2y$12$HASHED_PWD', '+1-212-111-0003', NULL, 'agent', NOW(), NOW(), NOW()),
+(5, 'Isabella', 'Torres', 'isabella.torres@estatevista.com', '$2y$12$HASHED_PWD', '+1-212-111-0004', NULL, 'agent', NOW(), NOW(), NOW()),
+-- Buyers
+(6, 'Marcus', 'Klein', 'marcus.klein@mail.com', '$2y$12$HASHED_PWD', '+1-646-200-0001', NULL, 'buyer', NOW(), NOW(), NOW()),
+(7, 'Amara', 'Levi', 'amara.levi@mail.com', '$2y$12$HASHED_PWD', '+1-646-200-0002', NULL, 'buyer', NOW(), NOW(), NOW()),
+(8, 'Tom', 'Nguyen', 'tom.nguyen@mail.com', '$2y$12$HASHED_PWD', '+1-646-200-0003', NULL, 'buyer', NOW(), NOW(), NOW()),
+(9, 'Sofia', 'Reyes', 'sofia.reyes@mail.com', '$2y$12$HASHED_PWD', '+1-646-200-0004', NULL, 'buyer', NOW(), NOW(), NOW()),
+(10, 'Ethan', 'Brooks', 'ethan.brooks@mail.com', '$2y$12$HASHED_PWD', '+1-646-200-0005', NULL, 'buyer', NOW(), NOW(), NOW()),
+(11, 'Chloe', 'Dupont', 'chloe.dupont@mail.com', '$2y$12$HASHED_PWD', '+1-646-200-0006', NULL, 'buyer', NOW(), NOW(), NOW()),
+(12, 'Lucas', 'Ferreira', 'lucas.ferreira@mail.com', '$2y$12$HASHED_PWD', '+1-646-200-0007', NULL, 'buyer', NOW(), NOW(), NOW()),
+(13, 'Mia', 'Hoffman', 'mia.hoffman@mail.com', '$2y$12$HASHED_PWD', '+1-646-200-0008', NULL, 'buyer', NOW(), NOW(), NOW()),
+(14, 'Noah', 'Okafor', 'noah.okafor@mail.com', '$2y$12$HASHED_PWD', '+1-646-200-0009', NULL, 'buyer', NOW(), NOW(), NOW()),
+(15, 'Aaliya', 'Hassan', 'aaliya.hassan@mail.com', '$2y$12$HASHED_PWD', '+1-646-200-0010', NULL, 'buyer', NOW(), NOW(), NOW()),
+(16, 'Ryan', 'Callahan', 'ryan.callahan@mail.com', '$2y$12$HASHED_PWD', '+1-646-200-0011', NULL, 'buyer', NOW(), NOW(), NOW()),
+(17, 'Priya', 'Sharma', 'priya.sharma@mail.com', '$2y$12$HASHED_PWD', '+1-646-200-0012', NULL, 'buyer', NOW(), NOW(), NOW()),
+(18, 'Diego', 'Morales', 'diego.morales@mail.com', '$2y$12$HASHED_PWD', '+1-646-200-0013', NULL, 'buyer', NOW(), NOW(), NOW()),
+(19, 'Elena', 'Petrov', 'elena.petrov@mail.com', '$2y$12$HASHED_PWD', '+1-646-200-0014', NULL, 'buyer', NOW(), NOW(), NOW()),
+(20, 'James', 'Osei', 'james.osei@mail.com', '$2y$12$HASHED_PWD', '+1-646-200-0015', NULL, 'buyer', NOW(), NOW(), NOW()),
+(21, 'Yuki', 'Tanaka', 'yuki.tanaka@mail.com', '$2y$12$HASHED_PWD', '+1-646-200-0016', NULL, 'buyer', NOW(), NOW(), NOW()),
+(22, 'Lena', 'Schmidt', 'lena.schmidt@mail.com', '$2y$12$HASHED_PWD', '+1-646-200-0017', NULL, 'buyer', NOW(), NOW(), NOW()),
+(23, 'Omar', 'Al-Rashid', 'omar.alrashid@mail.com', '$2y$12$HASHED_PWD', '+1-646-200-0018', NULL, 'buyer', NOW(), NOW(), NOW()),
+(24, 'Grace', 'Williams', 'grace.williams@mail.com', '$2y$12$HASHED_PWD', '+1-646-200-0019', NULL, 'buyer', NOW(), NOW(), NOW()),
+(25, 'Felix', 'Boateng', 'felix.boateng@mail.com', '$2y$12$HASHED_PWD', '+1-646-200-0020', NULL, 'buyer', NOW(), NOW(), NOW());
+
+-- ────────────────────────────────────────────────────────────
+-- 2. AGENTS
+-- ────────────────────────────────────────────────────────────
+INSERT INTO agents
+(id, user_id, agency_name, license_number, commission_rate, is_active, bio, created_at, updated_at)
+VALUES
+(1, 2, 'Mitchell Realty Group', 'NY-AG-2018-0042', 5.00, 1, 'Jordan has 10+ years in Manhattan luxury real estate, specializing in high-rise condominiums and penthouse sales.', NOW(), NOW()),
+(2, 3, 'Reynolds & Partners', 'NY-AG-2019-0115', 4.50, 1, 'Sophia focuses on Brooklyn brownstones and sustainable housing. She is known for her transparent negotiation approach.', NOW(), NOW()),
+(3, 4, 'Chen Property Advisors', 'NY-AG-2020-0233', 5.50, 1, 'Marcus built his reputation on Queens investment properties and has closed over 300 transactions since 2015.', NOW(), NOW()),
+(4, 5, 'Torres Luxury Estates', 'NY-AG-2017-0009', 6.00, 1, 'Isabella specializes in ultra-luxury Manhattan properties above $5M, with a client portfolio spanning 15 countries.', NOW(), NOW());
+
+-- ────────────────────────────────────────────────────────────
+-- 3. AMENITIES
+-- ────────────────────────────────────────────────────────────
+INSERT INTO amenities
+(id, name, icon, created_at, updated_at)
+VALUES
+(1, 'Swimming Pool', 'bi-water', NOW(), NOW()),
+(2, 'Gym & Fitness', 'bi-bicycle', NOW(), NOW()),
+(3, 'Parking Garage', 'bi-p-circle', NOW(), NOW()),
+(4, 'Concierge Service', 'bi-person-badge', NOW(), NOW()),
+(5, 'Rooftop Terrace', 'bi-sun', NOW(), NOW()),
+(6, 'Pet Friendly', 'bi-heart', NOW(), NOW()),
+(7, 'Home Theater', 'bi-tv', NOW(), NOW()),
+(8, 'Smart Home System', 'bi-house-gear', NOW(), NOW()),
+(9, 'Private Garden', 'bi-tree', NOW(), NOW()),
+(10, 'Doorman 24/7', 'bi-shield-check', NOW(), NOW()),
+(11, 'EV Charging Station', 'bi-lightning-charge', NOW(), NOW()),
+(12, 'Storage Unit', 'bi-box-seam', NOW(), NOW()),
+(13, 'Bicycle Storage', 'bi-bicycle', NOW(), NOW()),
+(14, 'Laundry In-Unit', 'bi-basket', NOW(), NOW()),
+(15, 'Balcony / Terrace', 'bi-door-open', NOW(), NOW());
+
+
+-- ────────────────────────────────────────────────────────────
+-- 4. PROPERTIES  (50 listings)
+-- ────────────────────────────────────────────────────────────
+INSERT INTO properties
+    (id, agent_id, title, slug, description, type, status,
+     price, surface, bedrooms, bathrooms, floors, year_built,
+     address, city, state, zip_code, country,
+     is_featured, is_published,
+     created_at, updated_at)
+VALUES
+
+-- ── MANHATTAN ────────────────────────────────────────────────
+(1,  4, 'One57 Sky Suite',
+ 'one57-sky-suite',
+ 'Perched on the 58th floor of Billionaires'' Row, this breathtaking penthouse suite offers unobstructed Central Park panoramas. Floor-to-ceiling windows flood every room with natural light. The chef''s kitchen features Miele appliances, while the master suite includes a spa bath with heated marble floors. White-glove concierge service available around the clock.',
+ 'penthouse', 'for_sale', 14950000, 4800, 5, 5, 58, 2014,
+ '157 West 57th Street, Apt 58A', 'New York City', 'New York', '10019', 'US',
+ 1, 1, '2018-03-15 10:00:00', '2024-12-20 14:30:00'),
+
+(2,  1, 'St. George Bayfront Residence',
+ 'st-george-bayfront-residence',
+ 'This spacious three-bedroom apartment sits in the heart of Washington Heights with breathtaking Hudson River views. Renovated open-plan living areas showcase wide-plank hardwood floors and custom millwork throughout. The gourmet kitchen includes quartz countertops and stainless steel appliances. Building amenities include a landscaped rooftop terrace and state-of-the-art fitness center.',
+ 'apartment', 'for_rent', 4000, 2660, 3, 2, 12, 2008,
+ '45 Cabrini Boulevard, Apt 12C', 'New York City', 'New York', '10033', 'US',
+ 1, 1, '2019-05-20 09:15:00', '2025-01-10 11:20:00'),
+
+(3,  4, 'SoHo Cast Iron Loft',
+ 'soho-cast-iron-loft',
+ 'Authentic SoHo loft occupying an entire floor of a landmark cast-iron building. Original exposed brick walls and massive industrial windows celebrate the neighborhood''s artistic heritage. Twelve-foot ceilings create gallery-worthy proportions throughout the open plan space. The custom kitchen and live-edge walnut island make this a true entertainer''s paradise in downtown Manhattan.',
+ 'apartment', 'for_rent', 5200, 3660, 4, 3, 6, 1895,
+ '110 Prince Street, Loft 4', 'New York City', 'New York', '10012', 'US',
+ 1, 1, '2020-08-12 16:45:00', '2025-02-14 10:00:00'),
+
+(4,  1, 'Tribeca Terrace Residence',
+ 'tribeca-terrace-residence',
+ 'Elegant three-bedroom apartment in a full-service Tribeca condominium steps from Hudson River Park. Generous proportions and south-facing exposure ensure natural light throughout the day. The principal bedroom features a walk-in closet and marble en-suite bath. Building offers 24-hour doorman, children''s playroom, and a beautifully landscaped private residents'' garden.',
+ 'apartment', 'for_rent', 3200, 2310, 3, 2, 9, 2003,
+ '200 Chambers Street, Apt 9D', 'New York City', 'New York', '10007', 'US',
+ 0, 1, '2021-01-25 08:30:00', '2025-03-18 15:45:00'),
+
+(5,  4, 'Chelsea Garden Penthouse',
+ 'chelsea-garden-penthouse',
+ 'Sprawling full-floor penthouse crowning a boutique Chelsea building, complete with a wraparound private terrace and open-sky Manhattan views. The double-height living room is anchored by a gas fireplace and bespoke bookshelves. A separate guest wing ensures complete privacy. World-class galleries, the High Line, and Chelsea Market are all within a two-block radius.',
+ 'penthouse', 'for_sale', 7500000, 3200, 4, 3, 10, 2001,
+ '215 West 23rd Street, PH', 'New York City', 'New York', '10011', 'US',
+ 1, 1, '2018-11-08 13:20:00', '2024-09-22 09:10:00'),
+
+(6,  1, 'West Side Towers Residence',
+ 'west-side-towers-residence',
+ 'Rare six-bedroom, four-bath apartment on the Upper West Side combining two adjacent units into a single grand home. The result is over 5,100 square feet of refined living space with dual chef''s kitchens, formal dining, and a private library. Enjoy iconic Hudson River sunsets from every west-facing room. Full-service building with pool and attended parking garage.',
+ 'apartment', 'for_sale', 9800000, 5100, 6, 4, 22, 1997,
+ '392 Central Park West, Apt 22AB', 'New York City', 'New York', '10025', 'US',
+ 0, 1, '2019-07-14 11:00:00', '2025-01-05 14:30:00'),
+
+(7,  4, 'Battery Park Vista',
+ 'battery-park-vista',
+ 'Luminous three-bedroom corner unit in a premier Battery Park City tower with Statue of Liberty and New York Harbor views. Floor-to-ceiling glass walls make the harbor a living artwork. The residence features wide-plank oak floors, motorized shades, and integrated smart-home technology. Residents enjoy a resort-style rooftop pool and private marina access just steps away.',
+ 'apartment', 'sold', 4600, 2800, 3, 2, 30, 2010,
+ '300 Vesey Street, Apt 30F', 'New York City', 'New York', '10282', 'US',
+ 0, 1, '2020-02-28 10:15:00', '2024-11-30 16:00:00'),
+
+(8,  1, 'Midtown Skyline Studio',
+ 'midtown-skyline-studio',
+ 'Thoughtfully designed studio with stunning Midtown skyline views from the 27th floor. High-end finishes include Italian marble countertops, integrated appliances, and motorized blackout blinds. The Murphy bed system with built-in shelving maximizes every square inch. Residents enjoy a full suite of amenities including a rooftop deck overlooking the Empire State Building.',
+ 'studio', 'for_rent', 3800, 650, 0, 1, 27, 2018,
+ '333 East 45th Street, Apt 27B', 'New York City', 'New York', '10017', 'US',
+ 0, 1, '2021-06-10 09:45:00', '2025-04-12 11:20:00'),
+
+(9,  4, 'Gramercy Park Classic',
+ 'gramercy-park-classic',
+ 'Coveted prewar six-room apartment overlooking the private Gramercy Park. Original architectural details — coffered ceilings, herringbone parquet floors, and decorative fireplaces — have been lovingly preserved and updated with modern systems. The private key to Gramercy Park is an incomparable lifestyle privilege in one of Manhattan''s most sought-after and historic neighborhoods.',
+ 'apartment', 'for_sale', 3695000, 2400, 3, 2, 7, 1927,
+ '34 Gramercy Park East, Apt 7A', 'New York City', 'New York', '10003', 'US',
+ 0, 1, '2018-09-19 15:30:00', '2024-12-08 10:45:00'),
+
+(10, 1, 'Financial District Corner Suite',
+ 'financial-district-corner-suite',
+ 'Dramatic corner two-bedroom with panoramic views spanning the Brooklyn Bridge, East River, and lower Manhattan skyline. Converted from a historic office tower, the unit retains original terrazzo floors and oversized industrial windows. The open kitchen features custom cabinetry and a wine refrigerator. A short walk to Wall Street, Fulton Center, and the Oculus transportation hub.',
+ 'apartment', 'for_rent', 2950, 1420, 2, 2, 18, 1932,
+ '99 John Street, Apt 18C', 'New York City', 'New York', '10038', 'US',
+ 0, 1, '2019-12-05 14:00:00', '2025-02-20 09:30:00'),
+
+-- ── BROOKLYN ─────────────────────────────────────────────────
+(11, 2, 'Park Slope Brownstone',
+ 'park-slope-brownstone',
+ 'Meticulously restored three-story brownstone on one of Park Slope''s most coveted tree-lined blocks. The owner''s triplex features original pocket doors, two decorative fireplaces, and a stunning parlor floor with fourteen-foot ceilings. A private backyard garden offers a serene urban retreat. Steps from Prospect Park, the Brooklyn Museum, and exceptional local dining.',
+ 'villa', 'for_sale', 4695000, 4200, 5, 3, 3, 1899,
+ '253 8th Avenue', 'Brooklyn', 'New York', '11215', 'US',
+ 1, 1, '2018-04-22 12:00:00', '2024-10-15 13:45:00'),
+
+(12, 2, 'DUMBO Waterfront Loft',
+ 'dumbo-waterfront-loft',
+ 'Spectacular converted factory loft in DUMBO with jaw-dropping Manhattan Bridge and skyline views. Soaring sixteen-foot ceilings, exposed steel columns, and original maple floors set the stage for dramatic urban living. The custom kitchen anchors the vast open-plan layout. A private deeded parking space and storage unit complete this rare offering in Brooklyn''s most iconic waterfront neighborhood.',
+ 'apartment', 'for_sale', 2895000, 2100, 2, 2, 4, 1912,
+ '30 Main Street, Unit 4E', 'Brooklyn', 'New York', '11201', 'US',
+ 1, 1, '2020-03-18 10:30:00', '2024-11-28 15:15:00'),
+
+(13, 2, 'Heights Residence Townhouse',
+ 'heights-residence-townhouse',
+ 'Grand five-bedroom townhouse in Brooklyn Heights with sweeping New York Harbor and Lower Manhattan views from the rooftop deck. The renovated four-story home features a chef''s kitchen, formal dining room, and a finished garden-level suite. Every bedroom has generous closet space. Brooklyn Heights Promenade, the Brooklyn Bridge, and excellent public transit are all nearby.',
+ 'villa', 'for_rent', 6000, 4408, 5, 3, 4, 1910,
+ '75 Pierrepont Street', 'Brooklyn', 'New York', '11201', 'US',
+ 1, 1, '2019-08-30 11:15:00', '2025-01-22 14:00:00'),
+
+(14, 2, 'South Bronx Creative Flat',
+ 'south-bronx-creative-flat',
+ 'Bright and airy two-bedroom apartment in a newly converted warehouse building in Mott Haven. The industrial aesthetic is softened by warm oak flooring and custom kitchen cabinetry. Large factory windows flood the space with natural light throughout the day. The building features an artist''s co-working studio, rooftop terrace with Manhattan views, and secure bicycle storage.',
+ 'apartment', 'for_rent', 2100, 1420, 2, 1, 3, 2020,
+ '375 Third Avenue', 'Bronx', 'New York', '10454', 'US',
+ 0, 1, '2021-09-12 08:45:00', '2025-03-05 10:20:00'),
+
+(15, 3, 'Williamsburg Penthouse',
+ 'williamsburg-penthouse',
+ 'Stunning full-floor penthouse in a boutique Williamsburg development with private rooftop terrace and wraparound Manhattan skyline views. The open-plan interior is finished with white oak floors, Calacatta marble, and Gaggenau appliances. A private elevator opens directly into the residence. The vibrant neighborhood offers world-class dining, nightlife, and the L-train steps from the front door.',
+ 'penthouse', 'for_sale', 3895000, 2900, 3, 3, 8, 2022,
+ '185 North 7th Street, PH', 'Brooklyn', 'New York', '11211', 'US',
+ 1, 1, '2022-05-20 09:00:00', '2024-12-18 11:30:00'),
+
+(16, 2, 'Cobble Hill Garden Duplex',
+ 'cobble-hill-garden-duplex',
+ 'Charming garden-level duplex in a classic Cobble Hill brownstone with a private south-facing garden and original prewar details. The upper floor hosts two bedrooms and a renovated bath, while the garden level offers a spacious family room opening to the terrace. Cobble Hill Park, artisan cafes, the F and G trains, and the Brooklyn Queens Expressway are all close by.',
+ 'apartment', 'for_rent', 2800, 1680, 2, 2, 2, 1905,
+ '126 Clinton Street, Apt GD', 'Brooklyn', 'New York', '11201', 'US',
+ 0, 1, '2020-10-08 13:00:00', '2025-02-11 09:45:00'),
+
+(17, 2, 'Bed-Stuy Classic Brownstone',
+ 'bed-stuy-classic-brownstone',
+ 'Beautifully renovated four-story brownstone on a landmark-designated block in Bedford-Stuyvesant. The owner''s duplex retains original stained-glass windows, ornate plasterwork, and two working fireplaces. The chef''s kitchen and formal dining room are ideal for entertaining. Two rental income units on the lower floors provide strong cash flow in this rapidly appreciating Brooklyn neighborhood.',
+ 'villa', 'for_sale', 2499000, 3800, 4, 3, 4, 1895,
+ '483 Decatur Street', 'Brooklyn', 'New York', '11233', 'US',
+ 0, 1, '2019-11-15 10:30:00', '2024-09-25 14:15:00'),
+
+(18, 3, 'Greenpoint Waterfront Studio',
+ 'greenpoint-waterfront-studio',
+ 'Modern studio in a newly built Greenpoint tower with East River and Manhattan skyline views. The compact but intelligent layout features a built-in Murphy bed, Italian kitchen with induction cooktop, and custom storage throughout. Floor-to-ceiling windows maximize the dramatic views. The building includes a co-working lounge, yoga studio, rooftop pool, and full-time concierge service.',
+ 'studio', 'for_rent', 2150, 580, 0, 1, 14, 2023,
+ '21 India Street, Unit 14A', 'Brooklyn', 'New York', '11222', 'US',
+ 0, 1, '2023-07-01 12:00:00', '2025-04-08 10:00:00'),
+
+-- ── QUEENS ───────────────────────────────────────────────────
+(19, 3, 'Long Island City Skyline Tower',
+ 'long-island-city-skyline-tower',
+ 'Sleek two-bedroom apartment in a newly delivered LIC high-rise with unobstructed Midtown Manhattan views from the 24th floor. Open-plan living and dining is anchored by a waterfall-edge island and integrated Sub-Zero and Wolf appliances. Spa-like bathrooms feature radiant-heated floors. The building''s amenity deck includes an Olympic-length pool, indoor basketball court, and sky lounge.',
+ 'apartment', 'for_rent', 3400, 1380, 2, 2, 24, 2021,
+ '41-42 24th Street, Apt 24F', 'Queens', 'New York', '11101', 'US',
+ 1, 1, '2021-10-12 11:30:00', '2025-01-15 13:20:00'),
+
+(20, 3, 'Astoria Garden Townhouse',
+ 'astoria-garden-townhouse',
+ 'Spacious three-bedroom townhouse in a quiet Astoria residential block with a private rear garden and attached garage. The renovated kitchen opens to a sunny family room with direct garden access, perfect for outdoor dining in warmer months. The full basement provides abundant storage. Astoria Park, museums, excellent Greek dining, and the N and W subway lines are all minutes away.',
+ 'townhouse', 'for_sale', 1899000, 2200, 3, 2, 3, 1958,
+ '27-15 Shore Boulevard', 'Queens', 'New York', '11102', 'US',
+ 0, 1, '2018-12-20 09:15:00', '2024-10-30 15:00:00'),
+
+(21, 3, 'Flushing Modern Apartment',
+ 'flushing-modern-apartment',
+ 'Contemporary two-bedroom apartment in the heart of Flushing, one block from the 7 train and Flushing Meadows-Corona Park. The open kitchen features quartz countertops and stainless appliances. Both bedrooms are generously sized with ample closet space. The building offers a modern lobby, gym, rooftop terrace, and video intercom security in a vibrant multicultural neighborhood.',
+ 'apartment', 'for_rent', 1850, 980, 2, 1, 6, 2019,
+ '136-20 Roosevelt Avenue, Apt 6B', 'Queens', 'New York', '11354', 'US',
+ 0, 1, '2020-06-25 14:45:00', '2025-03-12 11:00:00'),
+
+(22, 3, 'Jamaica Hills Colonial Home',
+ 'jamaica-hills-colonial-home',
+ 'Handsome four-bedroom Colonial home with a covered front porch, two-car garage, and a deep private backyard on a quiet cul-de-sac. The interior features hardwood floors throughout, a formal living room with fireplace, and an updated eat-in kitchen. Proximity to JFK International Airport and Jamaica Station makes this a superb choice for professionals with frequent travel needs.',
+ 'villa', 'for_sale', 979000, 2650, 4, 2, 2, 1955,
+ '170-25 Depot Road', 'Queens', 'New York', '11432', 'US',
+ 0, 1, '2019-02-14 10:00:00', '2024-11-05 12:30:00'),
+
+(23, 3, 'Bayside Waterfront Villa',
+ 'bayside-waterfront-villa',
+ 'Exceptional five-bedroom waterfront villa on Little Neck Bay with a private dock and sweeping water views. The chef''s kitchen opens to a great room with stone fireplace and direct access to a landscaped terrace. The master suite occupies the entire upper floor with a private balcony overlooking the bay. An attached two-car garage and generator provide year-round comfort and convenience.',
+ 'villa', 'for_sale', 3899000, 4600, 5, 4, 2, 1988,
+ '39-12 222nd Street', 'Queens', 'New York', '11361', 'US',
+ 1, 1, '2018-07-08 13:45:00', '2024-09-18 10:15:00'),
+
+-- ── BRONX ────────────────────────────────────────────────────
+(24, 1, 'Riverdale Manor Estate',
+ 'riverdale-manor-estate',
+ 'Magnificent six-bedroom Tudor manor set on a half-acre landscaped lot in the prestigious Riverdale enclave. The stately residence features a grand entry hall, library with custom built-ins, and a formal dining room with original coffered ceilings. The resort-style backyard includes a pool, pergola, and mature specimen trees. Private school, riverfront parkland, and express buses to Midtown nearby.',
+ 'villa', 'for_sale', 5490000, 6200, 6, 5, 3, 1938,
+ '4900 Independence Avenue', 'Bronx', 'New York', '10471', 'US',
+ 1, 1, '2018-05-30 11:20:00', '2024-12-02 14:45:00'),
+
+(25, 1, 'Fordham Heights Studio',
+ 'fordham-heights-studio',
+ 'Newly renovated studio apartment in a well-maintained pre-war elevator building steps from Fordham University and the D and B subway lines. The efficient layout features a modern kitchen with subway-tile backsplash, a tiled bath, and ample closet space. Ideal for a student, young professional, or investor seeking a low-maintenance income property in a highly connected Bronx neighborhood.',
+ 'studio', 'for_rent', 1290, 540, 0, 1, 5, 1952,
+ '2459 Jerome Avenue, Apt 5C', 'Bronx', 'New York', '10468', 'US',
+ 0, 1, '2021-04-18 09:00:00', '2025-02-28 10:30:00'),
+
+-- ── NEW JERSEY ───────────────────────────────────────────────
+(26, 2, 'Hoboken Brownstone',
+ 'hoboken-brownstone',
+ 'Stunning four-story brownstone in uptown Hoboken with a private roof deck and jaw-dropping Manhattan skyline views. The residence spans four levels, offering flexible living and home-office arrangements. The chef''s kitchen opens to a parlor floor with original fireplace and wide-plank floors. A private garage for two cars, a rarity in Hoboken, rounds out this truly exceptional urban home.',
+ 'villa', 'for_sale', 2295000, 3200, 4, 3, 4, 1891,
+ '1027 Hudson Street', 'Hoboken', 'New Jersey', '07030', 'US',
+ 0, 1, '2019-09-10 12:15:00', '2024-10-22 11:45:00'),
+
+(27, 2, 'Jersey City Grove Street Condo',
+ 'jersey-city-grove-street-condo',
+ 'Pristine two-bedroom, two-bath condominium in Jersey City''s highly desirable Grove Street Path district. The sleek open-plan kitchen with waterfall island is perfect for entertaining. Both bedrooms offer generous closet space, and the master features a marble en-suite bath. Direct PATH train access puts Midtown Manhattan less than fifteen minutes away. In-unit washer-dryer and parking included.',
+ 'apartment', 'for_rent', 2900, 1190, 2, 2, 11, 2016,
+ '65 Christopher Columbus Drive, Apt 11D', 'Jersey City', 'New Jersey', '07302', 'US',
+ 0, 1, '2020-11-05 10:45:00', '2025-03-20 09:00:00'),
+
+-- ── CONNECTICUT ──────────────────────────────────────────────
+(28, 4, 'Greenwich Estate',
+ 'greenwich-estate',
+ 'Grand seven-bedroom Georgian estate on six manicured acres in one of Greenwich''s finest back-country neighborhoods. The twenty-two-room mansion features a two-story library, wine cellar, home theater, and a guest cottage. The grounds include a regulation tennis court, heated pool, and a carriage house with three-car garage. Top-ranked Greenwich schools and a thirty-minute train to Grand Central Station.',
+ 'villa', 'for_sale', 12950000, 9800, 7, 8, 3, 1964,
+ '47 Round Hill Road', 'Greenwich', 'Connecticut', '06831', 'US',
+ 1, 1, '2018-01-25 14:30:00', '2024-11-12 13:00:00'),
+
+(29, 4, 'Westport Colonial Home',
+ 'westport-colonial-home',
+ 'Beautifully renovated five-bedroom Colonial in one of Westport''s most sought-after beach neighborhoods. The sun-drenched kitchen and family room open to a wraparound deck overlooking the pool and spa. Four-car garage plus a charming one-bedroom guest cottage. Short walk to Compo Beach on Long Island Sound. New Canaan Amtrak station and top-rated Westport public schools are convenient nearby.',
+ 'villa', 'for_sale', 4499000, 5400, 5, 5, 2, 2002,
+ '15 Beachside Avenue', 'Westport', 'Connecticut', '06880', 'US',
+ 0, 1, '2019-03-17 11:00:00', '2024-12-28 15:30:00'),
+
+-- ── FLORIDA ──────────────────────────────────────────────────
+(30, 4, 'Miami Beach Ocean Drive Penthouse',
+ 'miami-beach-ocean-drive-penthouse',
+ 'Iconic Art Deco penthouse on Ocean Drive steps from the sand of South Beach. The residence spans the entire top floor with a wraparound terrace and 360-degree views of the Atlantic Ocean and Biscayne Bay. The interior is finished with Venetian plaster walls, travertine floors, and a state-of-the-art home automation system. Private elevator access, pool, and dedicated beach cabana included.',
+ 'penthouse', 'for_sale', 8990000, 4200, 4, 4, 12, 1996,
+ '960 Ocean Drive, PH', 'Miami Beach', 'Florida', '33139', 'US',
+ 1, 1, '2018-06-12 10:00:00', '2024-10-08 14:20:00'),
+
+(31, 3, 'Brickell Bay View Apartment',
+ 'brickell-bay-view-apartment',
+ 'Sophisticated three-bedroom apartment in Brickell''s tallest residential tower with panoramic Biscayne Bay and Downtown Miami views. The Snaidero kitchen features Sub-Zero refrigeration and Bosch appliances. The primary suite offers a walk-in closet with custom organizers and a spa bath with soaking tub. Building amenities include three pools, a five-star spa, and a ground-floor Michelin-starred restaurant.',
+ 'apartment', 'for_rent', 4200, 1950, 3, 3, 48, 2017,
+ '801 Brickell Key Drive, Apt 4803', 'Miami', 'Florida', '33131', 'US',
+ 1, 1, '2020-08-22 09:30:00', '2025-01-18 11:15:00'),
+
+(32, 3, 'Fort Lauderdale Waterfront Villa',
+ 'fort-lauderdale-waterfront-villa',
+ 'Stunning five-bedroom waterfront villa on the Intracoastal Waterway with a private dock accommodating a sixty-foot yacht. The great room opens to a resort-style pool terrace through telescoping glass doors. The gourmet kitchen features quartzite countertops and a gas range. Located minutes from Las Olas Boulevard''s world-class dining and shopping, and Lauderdale-by-the-Sea beaches.',
+ 'villa', 'for_sale', 5499000, 5100, 5, 5, 2, 2008,
+ '2801 NE 28th Street', 'Fort Lauderdale', 'Florida', '33306', 'US',
+ 1, 1, '2018-10-05 13:45:00', '2024-09-14 10:30:00'),
+
+(33, 1, 'Naples Golf & Beach Club Condo',
+ 'naples-golf-beach-club-condo',
+ 'Elegant three-bedroom condominium in an exclusive gated community overlooking the fourth fairway of a championship golf course in Naples. Sunset western exposure illuminates the great room each evening. The kitchen was redesigned with custom cabinetry and Thermador appliances. Community amenities include three pools, pickleball courts, a beach club with shuttle, and a recently renovated clubhouse.',
+ 'apartment', 'for_sale', 1899000, 2200, 3, 3, 4, 2004,
+ '5555 Heron Point Drive, Unit 402', 'Naples', 'Florida', '34108', 'US',
+ 0, 1, '2019-12-28 12:00:00', '2024-11-20 09:45:00'),
+
+-- ── CALIFORNIA ───────────────────────────────────────────────
+(34, 4, 'Beverly Hills Contemporary Estate',
+ 'beverly-hills-contemporary-estate',
+ 'Extraordinary six-bedroom contemporary estate behind gates in prime Beverly Hills with city-lights and ocean views. Walls of glass dissolve indoor-outdoor boundaries, leading to an infinity pool and spa cantilevered over the hillside. The chef''s kitchen with La Cornue range and the climate-controlled wine room satisfy the most discerning tastes. A private screening room and gym complete this trophy property.',
+ 'villa', 'for_sale', 24950000, 8700, 6, 8, 2, 2019,
+ '1401 Carla Ridge', 'Beverly Hills', 'California', '90210', 'US',
+ 1, 1, '2019-08-15 11:30:00', '2024-12-05 14:00:00'),
+
+(35, 4, 'Malibu Oceanfront Residence',
+ 'malibu-oceanfront-residence',
+ 'Rare Malibu Colony oceanfront property with over seventy feet of private beach and uninterrupted Pacific Ocean views. The four-bedroom residence features a seamless indoor-outdoor layout opening directly to the sand. Dramatic living room with twenty-foot ceilings, a sleek kitchen with Miele appliances, and a rooftop sundeck perfect for sunset viewing. An architectural masterpiece on one of California''s most coveted shores.',
+ 'villa', 'for_sale', 18950000, 4800, 4, 5, 2, 2015,
+ '23642 Pacific Coast Highway', 'Malibu', 'California', '90265', 'US',
+ 1, 1, '2018-11-20 10:15:00', '2024-10-18 13:45:00'),
+
+(36, 2, 'San Francisco Pacific Heights Victorian',
+ 'san-francisco-pacific-heights-victorian',
+ 'Showstopping five-bedroom Painted Lady Victorian on a premier Pacific Heights block with Golden Gate Bridge and Bay views. The 1890 landmark exterior is complemented by a fully modernized interior featuring a gourmet kitchen, spa baths, and radiant floor heating throughout. The formal parlor retains original pocket doors and ornate plasterwork ceilings. Walking distance to the boutiques of Sacramento Street.',
+ 'villa', 'for_sale', 6499000, 4100, 5, 4, 4, 1890,
+ '2960 Pacific Avenue', 'San Francisco', 'California', '94115', 'US',
+ 1, 1, '2018-02-10 09:00:00', '2024-09-30 11:20:00'),
+
+(37, 3, 'Silver Lake Modern Townhouse',
+ 'silver-lake-modern-townhouse',
+ 'Architecturally designed four-bedroom townhouse in the hills of Silver Lake with a rooftop deck and sweeping Downtown Los Angeles and Griffith Observatory views. Open-plan main floor with polished concrete floors, a Bulthaup kitchen, and walls of glass opening to a private courtyard. The master suite features a sky-lit spa bath. Walkable to Silver Lake Reservoir and the neighborhood''s iconic independent coffee shops.',
+ 'townhouse', 'for_sale', 2399000, 2600, 4, 3, 3, 2021,
+ '2821 Hyperion Avenue', 'Los Angeles', 'California', '90027', 'US',
+ 0, 1, '2021-07-22 14:30:00', '2025-01-08 10:00:00'),
+
+(38, 1, 'Santa Monica Beachside Studio',
+ 'santa-monica-beachside-studio',
+ 'Well-appointed studio steps from the Santa Monica Pier and Third Street Promenade. The bright space features bamboo floors, a fully updated kitchen with sea-glass tile backsplash, and a private balcony with partial ocean views. The building offers a rooftop sundeck, surfboard storage, and a seasonal beach bonfire pit. Ideal as a pied-à-terre or vacation rental in one of California''s most desirable coastal destinations.',
+ 'studio', 'for_rent', 2800, 520, 0, 1, 4, 2011,
+ '1440 Ocean Avenue, Apt 4G', 'Santa Monica', 'California', '90401', 'US',
+ 0, 1, '2020-05-14 11:45:00', '2025-04-02 09:15:00'),
+
+-- ── TEXAS ─────────────────────────────────────────────────────
+(39, 3, 'Austin Lakefront Estate',
+ 'austin-lakefront-estate',
+ 'Stunning five-bedroom contemporary estate on the shores of Lake Austin with a private boat dock and resort-style pool. The open-plan great room features twenty-four-foot ceilings, a glass-enclosed wine wall, and panoramic lake views from every angle. The outdoor living pavilion with summer kitchen and fire pit is designed for year-round entertaining. Located in the coveted Westlake Hills school district.',
+ 'villa', 'for_sale', 4499000, 5800, 5, 5, 2, 2018,
+ '5700 Westlake Drive', 'Austin', 'Texas', '78746', 'US',
+ 1, 1, '2018-09-08 13:00:00', '2024-11-15 15:20:00'),
+
+(40, 3, 'Houston River Oaks Mansion',
+ 'houston-river-oaks-mansion',
+ 'Grand seven-bedroom River Oaks estate on a half-acre lot with a guest house, pool, and cabana in the heart of Houston''s most prestigious neighborhood. The stately home was rebuilt in 2016 with the finest materials, including a Venetian-plaster foyer, hand-scraped wide-plank oak floors, and a dream kitchen with dual islands. Minutes from the Galleria, top private schools, and Memorial Park.',
+ 'villa', 'for_sale', 5990000, 8900, 7, 7, 2, 2016,
+ '3535 Inwood Drive', 'Houston', 'Texas', '77019', 'US',
+ 0, 1, '2019-01-20 10:30:00', '2024-12-10 12:45:00'),
+
+(41, 2, 'Dallas Uptown Modern Condo',
+ 'dallas-uptown-modern-condo',
+ 'Stylish two-bedroom, two-bath condominium in Dallas''s vibrant Uptown district, steps from McKinney Avenue trolley, top restaurants, and Katy Trail. The open-plan living area features floor-to-ceiling windows with Downtown skyline views, a Bosch kitchen, and wide-plank hardwood floors. Luxurious building amenities include a resort pool, outdoor kitchen, fitness center, and twenty-four-hour concierge.',
+ 'apartment', 'for_rent', 2500, 1240, 2, 2, 15, 2014,
+ '2777 Hood Street, Apt 1507', 'Dallas', 'Texas', '75219', 'US',
+ 0, 1, '2020-07-16 09:20:00', '2025-02-25 11:00:00'),
+
+-- ── ILLINOIS ──────────────────────────────────────────────────
+(42, 4, 'Chicago Gold Coast Penthouse',
+ 'chicago-gold-coast-penthouse',
+ 'Magnificent duplex penthouse crowning a landmark Gold Coast tower with sweeping Lake Michigan and Navy Pier views. The double-height living room is anchored by a fireplace and custom art wall. The gourmet kitchen features a full-length marble island and Sub-Zero refrigeration. A private rooftop terrace with outdoor kitchen and heated lounge makes year-round entertaining a delight in the heart of Chicago.',
+ 'penthouse', 'for_sale', 5990000, 5200, 4, 4, 40, 1991,
+ '21 East Huron Street, PH', 'Chicago', 'Illinois', '60611', 'US',
+ 1, 1, '2018-03-28 12:45:00', '2024-10-25 14:30:00'),
+
+(43, 1, 'Lincoln Park Greystone Apartment',
+ 'lincoln-park-greystone-apartment',
+ 'Beautifully renovated three-bedroom apartment in a classic Lincoln Park greystone featuring fourteen-foot ceilings, exposed brick, and original hardwood floors. The updated kitchen opens to a south-facing deck overlooking a private courtyard garden. Two private parking spaces included. Walking distance to Lincoln Park Zoo, North Pond Nature Sanctuary, and the vibrant dining and nightlife of Armitage Avenue.',
+ 'apartment', 'for_rent', 3600, 1750, 3, 2, 3, 1908,
+ '2341 North Halsted Street, Unit 2', 'Chicago', 'Illinois', '60614', 'US',
+ 0, 1, '2020-04-12 10:15:00', '2025-03-08 13:30:00'),
+
+-- ── MASSACHUSETTS ─────────────────────────────────────────────
+(44, 4, 'Boston Back Bay Brownstone',
+ 'boston-back-bay-brownstone',
+ 'Exquisite four-story Back Bay brownstone on one of Boston''s most desirable blocks, offering the rarest combination of historic grandeur and contemporary luxury. The owner''s duplex features a sweeping staircase, two fireplaces, and a state-of-the-art chef''s kitchen with island seating for eight. The private roof terrace surveys Newbury Street''s legendary streetscape. Deeded parking garage and storage included.',
+ 'villa', 'for_sale', 6490000, 4600, 5, 4, 4, 1882,
+ '302 Commonwealth Avenue', 'Boston', 'Massachusetts', '02115', 'US',
+ 1, 1, '2018-08-05 11:00:00', '2024-11-22 10:15:00'),
+
+(45, 2, 'Cambridge River View Condo',
+ 'cambridge-river-view-condo',
+ 'Light-filled two-bedroom condominium in a modern Cambridge building overlooking the Charles River and MIT campus. The Boffi kitchen features quartz counters and integrated Miele appliances. A private balcony invites morning coffee with river views. Building amenities include a fitness center, bicycle storage, and a rooftop terrace. Steps from Harvard Square, the Red Line, and the vibrant Kendall Square innovation hub.',
+ 'apartment', 'for_rent', 3100, 1060, 2, 2, 8, 2020,
+ '1 Charles River Square, Unit 8D', 'Cambridge', 'Massachusetts', '02139', 'US',
+ 0, 1, '2021-02-18 09:45:00', '2025-04-15 11:30:00'),
+
+-- ── WASHINGTON D.C. ───────────────────────────────────────────
+(46, 1, 'Georgetown Federal Row House',
+ 'georgetown-federal-row-house',
+ 'Immaculate five-bedroom Federal row house on one of Georgetown''s most historic cobblestone streets. The fully restored 1820 residence retains period-correct millwork, wide-plank pine floors, and two wood-burning fireplaces, all complemented by a modern kitchen addition with heated limestone floors. A private English garden and carriage house provide extraordinary outdoor living and garage parking.',
+ 'villa', 'for_sale', 4699000, 3900, 5, 4, 4, 1820,
+ '3301 N Street NW', 'Washington', 'D.C.', '20007', 'US',
+ 1, 1, '2018-04-10 14:20:00', '2024-09-28 12:00:00'),
+
+(47, 1, 'Capitol Hill Victorian Flat',
+ 'capitol-hill-victorian-flat',
+ 'Gracious upper-level flat in a landmark Capitol Hill Victorian, featuring original hardwood floors, ten-foot ceilings, and two decorative fireplaces. The renovated kitchen with farmhouse sink opens to a rear deck overlooking a shared garden. The generous primary suite offers a spa bath with radiant-heated floors. A short stroll to Eastern Market, the Library of Congress, and multiple Metro lines.',
+ 'apartment', 'for_rent', 2750, 1300, 2, 2, 2, 1897,
+ '623 East Capitol Street NE, Apt 2', 'Washington', 'D.C.', '20003', 'US',
+ 0, 1, '2020-09-22 10:00:00', '2025-01-30 14:45:00'),
+
+-- ── NEVADA ────────────────────────────────────────────────────
+(48, 4, 'Las Vegas High Roller Sky Suite',
+ 'las-vegas-high-roller-sky-suite',
+ 'Ultra-luxury three-bedroom sky suite on the 63rd floor of a Strip iconic tower with panoramic Las Vegas Valley and Red Rock Canyon views. The residence is finished with book-matched marble, custom millwork, and a fully automated Crestron smart-home system. The Chef''s kitchen features La Cornue range and Subzero refrigeration. Includes two valet parking spaces and personal concierge with Strip resort access.',
+ 'penthouse', 'for_sale', 5490000, 4100, 3, 4, 63, 2020,
+ '3900 Las Vegas Boulevard South, Suite 6302', 'Las Vegas', 'Nevada', '89119', 'US',
+ 1, 1, '2020-12-15 13:30:00', '2024-10-12 11:45:00'),
+
+(49, 3, 'Henderson Desert Modern Home',
+ 'henderson-desert-modern-home',
+ 'Striking four-bedroom desert-modern home in a gated Henderson community with spectacular Las Vegas Strip skyline views from the elevated back terrace. The open-plan interior features polished concrete floors, floor-to-ceiling glass, and a Thermador kitchen with dramatic island. The zero-edge pool and spa seamlessly merge with the desert landscape beyond. The three-car garage offers EV charging infrastructure.',
+ 'villa', 'for_sale', 1899000, 3800, 4, 3, 2, 2022,
+ '1427 Emerald Valley Drive', 'Henderson', 'Nevada', '89012', 'US',
+ 0, 1, '2022-06-08 10:00:00', '2025-02-18 09:30:00'),
+
+-- ── WASHINGTON STATE ──────────────────────────────────────────
+(50, 2, 'Seattle Capitol Hill Modern Condo',
+ 'seattle-capitol-hill-modern-condo',
+ 'Thoughtfully designed two-bedroom condominium in a boutique Capitol Hill building with protected Olympic Mountain and Elliott Bay views. The Henrybuilt kitchen features a marble backsplash, induction cooktop, and integrated refrigerator. Wide-plank white oak floors flow through the open plan living area. Building amenities include a rooftop terrace with fire pits, EV charging stations, and secure bicycle storage.',
+ 'apartment', 'for_rent', 2600, 1080, 2, 2, 7, 2019,
+ '1400 East Union Street, Unit 703', 'Seattle', 'Washington', '98122', 'US',
+ 0, 1, '2021-03-25 11:15:00', '2025-04-20 10:00:00');

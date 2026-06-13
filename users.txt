@@ -1,0 +1,14 @@
+Email	Mot de passe	Rôle
+albert.flores@estatevista.com	Admin@2024	Admin
+jordan.mitchell@estatevista.com	Agent@2024	Agent
+sophia.reynolds@estatevista.com	Agent@2024	Agent
+marcus.chen@estatevista.com	Agent@2024	Agent
+isabella.torres@estatevista.com	Agent@2024	Agent
+marcus.klein@mail.com	Buyer@2024	Buyer
+amara.levi@mail.com	Buyer@2024	Buyer
+tom.nguyen@mail.com	Buyer@2024	Buyer
+sofia.reyes@mail.com	Buyer@2024	Buyer
+ethan.brooks@mail.com	Buyer@2024	Buyer
+Tous les 16 autres agents	Agent@2024	Agent
+
+SophieMartin2024

@@ -1,0 +1,23 @@
+Buyer voit un bien (for_rent)
+        ↓
+Buyer soumet une demande de location → table rents (status: pending)
+        ↓
+Agent/Admin examine la demande → rents.status = approved/rejected
+        ↓
+Si approved → Transaction créée (type: rent, status: pending)
+        ↓
+Buyer paie → Transaction.status = completed
+              Transaction.paid_at = now()
+              Property.status = rented
+
+------------------------------------------------------------------------------------------
+Buyer voit un bien (for_sale)
+        ↓
+Buyer contacte l'agent (Message ou formulaire)
+        ↓
+Négociation hors plateforme ou via Messages
+        ↓
+Agent crée la Transaction (type: sale, status: pending)
+        ↓
+Paiement confirmé → Transaction.status = completed
+                     Property.status = sold
