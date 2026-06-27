@@ -56,6 +56,8 @@ du bien jusqu'à la signature du bail ou de la vente.
 | Mail | Laravel Mailable (Markdown) |
 
 ---
+## Video Dashboard
+https://github.com/user-attachments/assets/83b934d1-16e4-44de-a54d-c0708ca8f4c9
 
 ## Images
 
